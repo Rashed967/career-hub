@@ -1,8 +1,8 @@
 import React from 'react';
 import Job from '../Job/Job';
 
-const Jobs = ({jobs}) => {
-    
+const Jobs = ({jobs, showAll}) => {
+
     return (
         <>
         <h1 className='mt-20 mb-6 text-3xl font-bold my-5'>Featured Jobs</h1>
@@ -15,7 +15,7 @@ const Jobs = ({jobs}) => {
                 ></Job>)
             }
         </div>
-            <button className='rounded-md text-white font-semibold py-3 px-4 bg-[#7E90FE]'>See All Jobs</button>
+            <button onClick={() => showAll(true)} className='rounded-md text-white font-semibold py-3 px-4 bg-[#7E90FE]'>See All Jobs</button>
         </>
     );
 };

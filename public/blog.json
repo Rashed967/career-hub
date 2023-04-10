@@ -1,0 +1,23 @@
+[
+    {
+      "id": 1,
+      "title": "When should you use context API?",
+      "description" : "Authentication: If you have a login system that needs to be accessed by multiple components throughout your app, you can use the Context API to provide the user authentication data to all components.Internationalization, If you have an app that needs to support multiple languages, you can use the Context API to provide the translation data to all components.Global state management: If you have a large app with many components that need access to the same state data, Youfdsaf Can use the Context API to create a global state that can be accessed by all components."
+    },
+    {
+      "id": 2,
+      "title": "What is a custom hook?",
+      "description": "A custom hook is a reusable function in React that encapsulates some behavior or logic, and can be shared between components. Custom hooks are defined using the use prefix in the function name, and use one or more of the built-in React hooks, such as useState, useEffect, useRef, or useContext. Custom hooks can be used to abstract away complex logic from the component, making it more readable and easier to understand. By encapsulating the logic in a custom hook, the component can simply call the hook and pass in any necessary data, instead of having to implement the logic itself."
+    },
+    {
+      "id": 3,
+      "title": "What is useRef?",
+      "description": "useRef is a built-in hook in React that provides a way to create a mutable value that persists across component renders. Unlike useState, useRef doesn't trigger a re-render when the value is updated, which makes it useful for storing values that don't affect the component rendering. useRef returns an object with a current property, which can be used to store and access the current value of the reference."
+    },
+    {
+      "id": 4,
+      "title": "What is useMemo?",
+      "description": "useMemo is a built-in hook in React that allows you to memoize expensive computations so that they're only recalculated when necessary. The useMemo hook takes two arguments: a function that performs the computation, and an array of dependencies that trigger the computation when they change. When the dependencies change, useMemo will recompute the value and return it. Otherwise, it will return the cached value from the previous render."
+    }
+  ]
+  

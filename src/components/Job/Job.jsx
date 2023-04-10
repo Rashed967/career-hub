@@ -14,7 +14,8 @@ const Job = ({job}) => {
         location,
         fulltime_or_parttime, 
         salary, 
-        experiences, 
+        experiences,
+        id,
 
     } = job
     return (
@@ -33,7 +34,7 @@ const Job = ({job}) => {
     <span><FontAwesomeIcon icon={faDollar} /> Salary : {salary}</span>
     </div>
     <div className="card-actions justify-end">
-    <Link  to="job-details">
+    <Link  to={`/job-details/${id}`}>
     <button  className='rounded-md text-white font-semibold py-3 px-4 bg-[#7E90FE]'>View Details</button>
     </Link>
     </div>

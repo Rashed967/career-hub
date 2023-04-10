@@ -11,6 +11,8 @@ import {
     Tooltip,  
   } from 'recharts'
   
+  import { useContext } from "react";
+import { JobContex } from '../Home/Home';
 
   const data = [
     {
@@ -66,6 +68,9 @@ import {
 
 
 const Statistics = () => {
+  const jobs = useContext(JobContex)
+  console.log(jobs)
+
     return (
         <div className='mt-9 flex justify-center'>
             <ComposedChart className='w-3/4' width={700} height={250} data={data}>
