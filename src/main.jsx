@@ -9,6 +9,8 @@ import {
 import Root from './components/Layout/Root/Root';
 import Home from './components/Home/Home';
 import JobDetails from './components/JobDetails/JobDetails';
+import Statistics from './components/Statistics/Statistics';
+import ErrorPage from './components/ErrorPage/ErrorPage';
 
 
 const router = createBrowserRouter([
@@ -22,8 +24,16 @@ const router = createBrowserRouter([
         loader : () => fetch('categories.json'),
       },
       {
+        path : "statistics",
+        element : <Statistics></Statistics>
+      },
+      {
         path : "job-details",
         element : <JobDetails></JobDetails>,
+      },
+      {
+        path : "*",
+        element : <ErrorPage></ErrorPage>,
       }
     ]
   },

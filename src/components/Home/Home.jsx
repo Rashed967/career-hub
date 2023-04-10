@@ -15,10 +15,7 @@ const Home = () => {
         .then(data => setJobs(data))
     },[])
 
-    const [allJob, setJob] = useState([])
-    const getJobDetial = job =>{
-        setJob(job)
-    }
+   
     
 
     return (
@@ -29,7 +26,6 @@ const Home = () => {
             ></Categories>
             <Jobs
             jobs={jobs}
-            getJobDetial={getJobDetial}
             ></Jobs>
         </div>
     );

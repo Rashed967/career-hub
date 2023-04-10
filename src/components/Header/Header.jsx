@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Header = () => {
     return (
         <div className='flex justify-between mb-4 items-center '>
-            <h2 className='font-bold text-2xl'>Job Search</h2>
+            <h2 className='font-bold text-2xl'><Link to="/">Job Search</Link></h2>
             <nav className='space-x-6 text-[#757575] font-semibold'>
                 <Link to="home">Home</Link>
                 <Link to="statistics">Statistics</Link>

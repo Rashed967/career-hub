@@ -1,7 +1,7 @@
 import React from 'react';
 import Job from '../Job/Job';
 
-const Jobs = ({jobs, getJobDetial}) => {
+const Jobs = ({jobs}) => {
     
     return (
         <>
@@ -12,7 +12,6 @@ const Jobs = ({jobs, getJobDetial}) => {
                 jobs.map(job => <Job
                 key={job.id}
                 job={job}
-                getJobDetial={getJobDetial}
                 ></Job>)
             }
         </div>
