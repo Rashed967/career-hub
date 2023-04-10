@@ -2,8 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocation, faDollar } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom';
 
-const Job = ({job}) => {
+const Job = ({job, getJobDetial}) => {
+
     const {
         company_logo, 
         job_title, 
@@ -31,7 +33,9 @@ const Job = ({job}) => {
     <span><FontAwesomeIcon icon={faDollar} /> Salary : {salary}</span>
     </div>
     <div className="card-actions justify-end">
-    <button className='rounded-md text-white font-semibold py-3 px-4 bg-[#7E90FE]'>View Details</button>
+    <Link  to="job-details">
+    <button onClick={() => getJobDetial(job)} className='rounded-md text-white font-semibold py-3 px-4 bg-[#7E90FE]'>View Details</button>
+    </Link>
     </div>
   </div>
 </div>
