@@ -9,16 +9,21 @@ export const JobContex = createContext('')
 const Home = () => {
     const categories = useLoaderData()
    
-    const [jobs, setJobs ] = useState([])
     
+    const [jobs, setJobs ] = useState([])
+    const [showAll, setShowAll] = useState(false)
+
     useEffect(() => {
         fetch('jobs.json')
         .then(res => res.json())
-        .then(data => setJobs(data.slice(0, 4)))
-    },[])
+        .then(data => setJobs(data))
+    },[jobs])
 
-   
-    
+    const showAllJob = data =>{
+        setShowAll(true)
+    }
+
+
 
     return (
        <JobContex.Provider value="Hello, how are you">
@@ -28,8 +33,8 @@ const Home = () => {
             categories={categories}
             ></Categories>
             <Jobs
-            jobs={jobs}
-            showAll={showAll}
+            jobs={jobs.slice(0, showAll ? 6 : 4)}
+            showAllJob={showAllJob}
             ></Jobs>
         </div>
        </JobContex.Provider>

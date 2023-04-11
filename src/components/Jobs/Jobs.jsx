@@ -1,7 +1,7 @@
 import React from 'react';
 import Job from '../Job/Job';
 
-const Jobs = ({jobs, showAll}) => {
+const Jobs = ({jobs, showAllJob}) => {
 
     return (
         <>
@@ -15,7 +15,7 @@ const Jobs = ({jobs, showAll}) => {
                 ></Job>)
             }
         </div>
-            <button onClick={() => showAll(true)} className='rounded-md text-white font-semibold py-3 px-4 bg-[#7E90FE]'>See All Jobs</button>
+            <button onClick={() => showAllJob(true)} className='rounded-md text-white font-semibold py-3 px-4 bg-[#7E90FE]'>See All Jobs</button>
         </>
     );
 };
