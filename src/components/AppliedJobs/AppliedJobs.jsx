@@ -22,13 +22,13 @@ const AppliedJobs = () => {
       }
 
     const filterByRemote = () =>{
-        const filtering = appliedJobs.filter(job => job.fulltime_or_parttime === 'Part-Time')
+        const filtering = appliedJobs.filter(job => job.remote_or_onsite === 'Remote')
         appliedJobs = filtering
         console.log(appliedJobs)    
     }  
 
     const filterByFullTime = () =>{
-        const filtering = appliedJobs.filter(job => job.fulltime_or_parttime === 'Full-time')
+        const filtering = appliedJobs.filter(job => job.remote_or_onsite === 'Onsite')
         appliedJobs = filtering
         console.log(appliedJobs)    
     }  
@@ -40,7 +40,7 @@ const AppliedJobs = () => {
             </div>
             <div className='flex mt-11 flex-row-reverse gap-x-4'>
                 <button onClick={() => filterByRemote('Part-Time')} className='btn btn-primary '>Filter By Remote</button>
-                <button onClick={() => filterByFullTime('Full-time')} className='btn btn-primary '>Filter By Full-Time</button>
+                <button onClick={() => filterByFullTime('Full-time')} className='btn btn-primary '>Filter By on-site</button>
             </div>
             {
                 appliedJobs.map((job, index) => <AppliedJob
