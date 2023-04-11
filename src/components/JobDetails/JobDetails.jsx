@@ -1,26 +1,34 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
-import JobDetail from '../JobDetail/JobDetail';
 import { JobContex } from '../Home/Home';
 import jobs from '../../../public/jobs.json'
+import JobDetail from '../JobDetail/JobDetail';
 
 
 const JobDetails = () => {
-    const [job, setJob] = useState(null);
-  const { id } = useParams();
-console.log(id)
+
+  const jobId = useParams()
+
+  const [jobs, setJobs] = useState([])
 
   useEffect(() => {
-    const job = jobs.find(job => job.id === Number(id));
-    setJob(job);
-    console.log(job)
-  }, [id]);
+    fetch('/jobs.json')
+    .then(res => res.json())
+    .then(data => setJobs(data))
+  }, [])
 
+  const newJob = [];
+  jobs.find(job => job.id ===  Number(jobId.jobId) && newJob.push(job))
+ 
 
     return (
         <div>
-            <h3>helloe from job details</h3>
-            <JobDetail></JobDetail>
+            {
+              newJob.map(j => <JobDetail
+              key={j.id}
+              j={j}
+              ></JobDetail>)
+            }
         </div>
     );
 };

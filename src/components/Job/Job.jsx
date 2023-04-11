@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocation, faDollar } from '@fortawesome/free-solid-svg-icons'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Job = ({job}) => {
 
@@ -18,6 +18,7 @@ const Job = ({job}) => {
         id,
 
     } = job
+    const navigate = useNavigate()
     return (
         <div>
             <div className="card card-compact my-3 bg-base-100 shadow-md text-left border">
