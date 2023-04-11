@@ -5,7 +5,7 @@ this is an assingment project for programming hero web developmnet course, where
 
 
 ## 🔗 Links
-(https://katherineoelsner.com/)
+(https://job-search-by-rashed.netlify.app/)
 
 
 
