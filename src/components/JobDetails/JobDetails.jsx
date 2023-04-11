@@ -22,7 +22,7 @@ const JobDetails = () => {
  
 
     return (
-        <div>
+        <div className='flex mt-24 gap-5'>
             {
               newJob.map(j => <JobDetail
               key={j.id}
