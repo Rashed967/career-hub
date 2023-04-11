@@ -18,7 +18,7 @@ const JobDetail = ({ j }) => {
         contact_information,
 
     } = j
-    console.log(j)
+
     return (
         <>
             <div className='text-left space-y-4'>

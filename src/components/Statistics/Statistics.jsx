@@ -69,7 +69,7 @@ import { JobContex } from '../Home/Home';
 
 const Statistics = () => {
   const jobs = useContext(JobContex)
-  console.log(jobs)
+
 
     return (
         <div className='mt-9 flex justify-center'>

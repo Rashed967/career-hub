@@ -7,24 +7,43 @@ const AppliedJobs = () => {
     const getStoredCart = getShoppingCart()
    
     const [jobs, setJobs] = useState([])
+    // const [appliedJobs, setAppliedJobs] = useState([])
+
     useEffect(() => {
         fetch('/jobs.json')
         .then(res => res.json())
         .then(data => setJobs(data))
       }, [])
       
-    const appliedJobs = []
+      let appliedJobs = []
       for(const id in getStoredCart){  
-        jobs.filter(job => job.id === getStoredCart[id] && appliedJobs.push(job))  
+        jobs.filter(job => job.id === getStoredCart[id] && appliedJobs.push(job) )
+  
       }
+
+    const filterByRemote = () =>{
+        const filtering = appliedJobs.filter(job => job.fulltime_or_parttime === 'Part-Time')
+        appliedJobs = filtering
+        console.log(appliedJobs)    
+    }  
+
+    const filterByFullTime = () =>{
+        const filtering = appliedJobs.filter(job => job.fulltime_or_parttime === 'Full-time')
+        appliedJobs = filtering
+        console.log(appliedJobs)    
+    }  
 
     return (
         <div>
             <div className='bg-emerald-500 py-14 rounded-sm'>
                     <h3 className='text-3xl font-semibold'>Applied Job</h3>
             </div>
+            <div className='flex mt-11 flex-row-reverse gap-x-4'>
+                <button onClick={() => filterByRemote('Part-Time')} className='btn btn-primary '>Filter By Remote</button>
+                <button onClick={() => filterByFullTime('Full-time')} className='btn btn-primary '>Filter By Full-Time</button>
+            </div>
             {
-                appliedJobs.map(job => <AppliedJob
+                appliedJobs.map((job, index) => <AppliedJob
                 key={job.id}
                 job={job}
                 ></AppliedJob>)
