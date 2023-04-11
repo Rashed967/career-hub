@@ -3,6 +3,7 @@ import { useLoaderData, useParams } from 'react-router-dom';
 import { JobContex } from '../Home/Home';
 import jobs from '../../../public/jobs.json'
 import JobDetail from '../JobDetail/JobDetail';
+import Header from '../Header/Header';
 
 
 const JobDetails = () => {
