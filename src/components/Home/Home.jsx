@@ -9,6 +9,9 @@ export const JobContex = createContext('')
 const Home = () => {
     const categories = useLoaderData()
    
+    const handleToCart = (id) =>{
+        console.log(id)
+    }
     
     const [jobs, setJobs ] = useState([])
     const [showAll, setShowAll] = useState(false)

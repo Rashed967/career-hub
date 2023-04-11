@@ -1,4 +1,5 @@
 import React from 'react';
+import { addToDb } from '../../../utils/fakedb';
 
 const JobDetail = ({ j }) => {
     const {
@@ -43,7 +44,7 @@ const JobDetail = ({ j }) => {
                     </div>
                 </div>
                 
-                <button className="btn btn-success w-full mt-4">Apply Now</button>
+                <button onClick={() => addToDb(id)} className="btn btn-success w-full mt-4">Apply Now</button>
 
             </div>
         </>
