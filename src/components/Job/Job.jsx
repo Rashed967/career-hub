@@ -5,7 +5,7 @@ import { faLocation, faDollar } from '@fortawesome/free-solid-svg-icons'
 import { Link, useNavigate } from 'react-router-dom';
 
 const Job = ({job}) => {
-
+    
     const {
         company_logo, 
         job_title, 

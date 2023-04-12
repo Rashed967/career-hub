@@ -3,7 +3,7 @@ import { getShoppingCart } from '../../../utils/fakedb';
 import AppliedJob from '../AppliedJob/AppliedJob';
 
 const AppliedJobs = () => {
-    
+  
     const getStoredCart = getShoppingCart()
    
     const [jobs, setJobs] = useState([])

@@ -4,6 +4,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const AppliedJob = ({job}) => {
+    
     const {
         company_logo, 
         job_title, 

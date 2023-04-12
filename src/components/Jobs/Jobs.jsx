@@ -15,7 +15,9 @@ const Jobs = ({jobs, showAllJob}) => {
                 ></Job>)
             }
         </div>
-            <button onClick={() => showAllJob(true)} className='rounded-md text-white font-semibold py-3 px-4 bg-[#7E90FE]'>See All Jobs</button>
+            <div className='flex justify-center'>
+                <button onClick={() => showAllJob(true)} className='rounded-md text-white font-semibold py-3 px-4 bg-[#7E90FE]'>See All Jobs</button>
+            </div>
         </>
     );
 };

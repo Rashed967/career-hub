@@ -18,6 +18,7 @@ const JobDetail = ({ j }) => {
         contact_information,
 
     } = j
+    
 
     return (
         <>

@@ -7,6 +7,7 @@ import Jobs from '../Jobs/Jobs';
 export const JobContex = createContext('')
 
 const Home = () => {
+   
     const categories = useLoaderData()
    
     const handleToCart = (id) =>{
